@@ -8,6 +8,8 @@ scala:
 python:
   - "2.7"
 install: 
+  # Install python as language setting can only support one
+  sudo apt-get install libpython2.7-dev
   # Install linkchecker
   - sudo pip install linkchecker --use-mirrors
   # Install jekyll for "make serve" local hosting
@@ -16,8 +18,6 @@ install:
   - sudo apt-get install gnuplot
   # install bc
   - sudo apt-get install bc
-  # install python because this spec only supports one language setting above
-  - sudo apt-get install python-dev python
 jdk:
   - openjdk7
   - oraclejdk7
