@@ -17,7 +17,7 @@ install:
   # install bc
   - sudo apt-get install bc
   # install python because this spec only supports one language setting above
-  - sudo apt-get install python-dev
+  - sudo apt-get install python-dev python
 jdk:
   - openjdk7
   - oraclejdk7
