@@ -9,7 +9,7 @@ python:
   - "2.7"
 install: 
   # Install python as language setting can only support one
-  sudo apt-get install libpython2.7-dev
+  - sudo apt-get install libpython2.7-dev
   # Install linkchecker
   - sudo pip install linkchecker --use-mirrors
   # Install jekyll for "make serve" local hosting
