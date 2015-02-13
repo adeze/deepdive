@@ -1,5 +1,5 @@
 # build image from Docker Hub
-build_image: adamwgoldberg/deepdive-github
+build_image: adamwgoldberg/deepdive-github:unstable
 
 language: 
   - scala
