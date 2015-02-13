@@ -3,7 +3,6 @@ build_image: adamwgoldberg/deepdive-github
 
 language: 
   - scala
-  - python
 scala:
   - "2.10.3"
 python:
