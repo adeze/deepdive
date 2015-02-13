@@ -16,6 +16,8 @@ install:
   - sudo apt-get install gnuplot
   # install bc
   - sudo apt-get install bc
+  # install python because this spec only supports one language setting above
+  - sudo apt-get install python-dev
 jdk:
   - openjdk7
   - oraclejdk7
