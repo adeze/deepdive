@@ -20,10 +20,10 @@ addons:
   postgresql: "9.3"
 env: 
   global:
-    - PGUSER=postgres
-    - PGPASSWORD=""
-    - PGPORT=5432
-    - PGHOST=localhost
+    #- PGUSER=postgres
+    #- PGPASSWORD=""
+    #- PGPORT=5432
+    #- PGHOST=localhost
     - DBNAME=deepdive_test
     - LD_LIBRARY_PATH=/tmp/dw_linux/lib:/tmp/dw_linux/lib64:/tmp/dw_linux/lib/numactl-2.0.9
 notifications:
