@@ -7,25 +7,21 @@ scala:
   - "2.10.3"
 python:
   - "2.7"
-install: 
-  # Install jekyll for "make serve" local hosting
-  - gem install jekyll
 jdk:
   - openjdk7
   - oraclejdk7
 sbt_args:
-addons:
-  postgresql: "9.3"
 env: 
   global:
-    #- PGUSER=postgres
-    #- PGPASSWORD=""
-    #- PGPORT=5432
-    #- PGHOST=localhost
+    - PGUSER=postgres
+    - PGPASSWORD=""
+    - PGPORT=5432
+    - PGHOST=localhost
     - DBNAME=deepdive_test
     - LD_LIBRARY_PATH=/tmp/dw_linux/lib:/tmp/dw_linux/lib64:/tmp/dw_linux/lib/numactl-2.0.9
     
 before_script:
+  - sudo /etc/init.d/postgresql start
   - unzip lib/dw_linux.zip -d /tmp/
   - psql -c 'create database deepdive_test;' -U postgres
 script: 
