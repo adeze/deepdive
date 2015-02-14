@@ -21,7 +21,7 @@ env:
     - LD_LIBRARY_PATH=/tmp/dw_linux/lib:/tmp/dw_linux/lib64:/tmp/dw_linux/lib/numactl-2.0.9
     
 before_script:
-  - sudo usermod -a -G ssl-cert postgres
+  - sudo usermod -a -G ssl-cert root
   - sudo /etc/init.d/postgresql start
   - unzip lib/dw_linux.zip -d /tmp/
   - psql -c 'create database deepdive_test;' -U postgres
