@@ -10,7 +10,7 @@ python:
 jdk:
   - openjdk7
   - oraclejdk7
-sbt_args:
+
 env: 
   global:
     - PGUSER=postgres
@@ -24,6 +24,8 @@ before_script:
   - sudo /etc/init.d/postgresql start
   - unzip lib/dw_linux.zip -d /tmp/
   - psql -c 'create database deepdive_test;' -U postgres
+  - ls -al /etc/ssl/private/ssl-cert-snakeoil.key
+  - whoami
 script: 
   # Check both localhost and website
   - ./test.sh
