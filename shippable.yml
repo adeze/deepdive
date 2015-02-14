@@ -23,6 +23,7 @@ env:
 before_script:
   - sudo chmod 777 /etc/ssl/private/ssl-cert-snakeoil.key
   - ls -al /etc/ssl/private/ssl-cert-snakeoil.key
+  - ls -al /etc/ssl/
   - sudo /etc/init.d/postgresql start
   - unzip lib/dw_linux.zip -d /tmp/
   - psql -c 'create database deepdive_test;' -U postgres
