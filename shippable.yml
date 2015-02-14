@@ -21,6 +21,7 @@ env:
     - LD_LIBRARY_PATH=/tmp/dw_linux/lib:/tmp/dw_linux/lib64:/tmp/dw_linux/lib/numactl-2.0.9
     
 before_script:
+  - sudo perl -pi -e 's/ssl = true/ssl = false/g' /etc/postgresql/9.3/main/postgresql.conf
   - sudo cat /etc/postgresql/9.3/main/postgresql.conf
   - sudo /etc/init.d/postgresql start
   - unzip lib/dw_linux.zip -d /tmp/
