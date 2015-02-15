@@ -25,7 +25,7 @@ before_script:
   - sudo cat /etc/postgresql/9.3/main/postgresql.conf
   - sudo /etc/init.d/postgresql start
   - unzip lib/dw_linux.zip -d /tmp/
-  - psql -c 'create database deepdive_test;' -U postgres
+  - sudo createdb deepdive_test
 script: 
   # Check both localhost and website
   - ./test.sh
