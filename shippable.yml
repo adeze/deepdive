@@ -21,7 +21,7 @@ env:
     
 before_script:
   - sudo perl -pi -e 's/ssl = true/ssl = false/g' /etc/postgresql/9.3/main/postgresql.conf
-  - sudo /etc/init.d/postgresql start
+  - LC_ALL="en_US.UTF-8" && sudo /etc/init.d/postgresql start
   - unzip lib/dw_linux.zip -d /tmp/
   - psql -h localhost -U postgres -c 'create database deepdive_test;'
 script: 
