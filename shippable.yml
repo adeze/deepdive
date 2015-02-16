@@ -29,4 +29,5 @@ script:
   # Source .bashrc as Shippable does not do this automatically
   - source ~/.bashrc
   # Test DeepDive
-  - ./test.sh 2>&1
+  - pwd
+  - ~/deepdive/test.sh 2>&1
