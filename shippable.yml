@@ -24,7 +24,7 @@ before_script:
   - sudo perl -pi -e 's/peer/trust/g' /etc/postgresql/9.3/main/pg_hba.conf
   - sudo service postgresql restart 
   - unzip lib/dw_linux.zip -d /tmp/
-  - psql -U postgres -c 'create database deepdive_test;'
+  - sudo -u postgres psql -c 'create database deepdive_test;'
 script: 
   # Source .bashrc as Shippable does not do this automatically
   - source ~/.bashrc
