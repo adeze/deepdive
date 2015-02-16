@@ -1,8 +1,7 @@
 # build image from Docker Hub
 build_image: adamwgoldberg/deepdive-github:unstable
 
-language: 
-  - scala
+language: scala
 scala:
   - "2.10.3"
 python:
